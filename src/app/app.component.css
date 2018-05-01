@@ -1,0 +1,28 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+.posicion {
+		position:absolute;
+		top: 11px;
+		left: 1360px;
+}
+.posiciong{
+  position:absolute;
+		top: 13.5px;
+		left: 1400px;
+}
+.card{
+  align-items: center;
+}
+.card-container{
+  width: 1300px;
+  margin: 10px auto;
+}
+h3{
+  text-align: center;
+}
+.boton-filter{
+  text-align: center;
+}

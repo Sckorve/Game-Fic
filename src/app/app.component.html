@@ -1,0 +1,67 @@
+<!--CABECERA-->
+<mat-toolbar color = "primary">
+    <mat-toolbar-row>
+      <mat-list>
+      <mat-list-item>
+        <img mat-line mat-list-avatar 
+            src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFzmqrRqimnwWrocCNA0-eVKBwwrxT7fQfOsMc6LX-_ZGla8h" alt="">        <span mat-line>SoraJigoku</span>
+      </mat-list-item>
+      </mat-list>
+      <div class = "posiciong">Game-Fic</div>
+    </mat-toolbar-row>  
+    <!--MENU CABECERA-->
+    <div class ="posicion">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Ayuda</button>
+      <button mat-menu-item>Cuenta premium</button>
+      <button mat-menu-item>Autores</button>
+  </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>gamepad</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<!--BOTON FILTRADO-->
+<div style="text-align:center;">
+  <button mat-button color = "primary" class = "boton-filter">Filtrado</button>
+</div>  
+<!--CONTENIDO PRIMERO EN EL TOP-->
+<div class = "card-container">
+  <mat-card class = "card">
+      <h3>Los 10 mas recientes</h3>
+      <mat-divider [inset]="false"  [vertical]="false">  </mat-divider>
+      <br>
+        <mat-card-header>    
+          <mat-card-subtitle>{{mdprincipal.autor}}</mat-card-subtitle>
+          <mat-card-title>{{mdprincipal.title_princ}}</mat-card-title>
+          <mat-card-content>{{mdprincipal.resumen}}</mat-card-content>
+          <img mat-card-avatar src = {{mdprincipal.avatar_princ}} alt=""> 
+          <mat-card-subtitle>{{mdprincipal.date}}</mat-card-subtitle>
+        </mat-card-header>
+  </mat-card>
+
+  <!--SEGUNDO TOP-->
+<mat-divider [inset]="false"  [vertical]="false">  </mat-divider>
+    <mat-card class = "card">
+          <mat-card-header>    
+            <mat-card-subtitle>{{mdprincipal.autor2}}</mat-card-subtitle>
+            <mat-card-title>{{mdprincipal.title_princ2}}</mat-card-title>
+            <mat-card-content>{{mdprincipal.resumen2}}</mat-card-content>
+            <img mat-card-avatar src = {{mdprincipal.avatar_princ2}} alt=""> 
+            <mat-card-subtitle>{{mdprincipal.date2}}</mat-card-subtitle>
+          </mat-card-header>
+    </mat-card>
+
+    <!--TERCERO TOP-->
+<mat-divider [inset]="false"  [vertical]="false">  </mat-divider>
+    <mat-card class = "card">
+          <mat-card-header>    
+            <mat-card-subtitle>{{mdprincipal.autor3}}</mat-card-subtitle>
+            <mat-card-title>{{mdprincipal.title_princ3}}</mat-card-title>
+            <mat-card-content>{{mdprincipal.resumen3}}</mat-card-content>
+            <img mat-card-avatar src = {{mdprincipal.avatar_princ3}} alt=""> 
+            <mat-card-subtitle>{{mdprincipal.date3}}</mat-card-subtitle>
+          </mat-card-header>
+    </mat-card>
+</div>
+<router-outlet></router-outlet>
